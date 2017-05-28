@@ -1,0 +1,126 @@
+/* {
+    border: 1px solid red !important;
+}*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    font-family: serif, helvetica, arial, sans-serif;
+    color: blue;
+    font-kerning: normal;
+}
+
+.grid {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.col-me {
+    width: 16.66%;
+    min-width: 150px;
+    display: flex;
+}
+
+.me {
+    height: 125px;
+    width: 125px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.company {
+    width: 83.34%;
+    text-align: right;
+    padding-bottom: 20px;
+    display: box;
+}
+
+hr {
+    width: 100%;
+    height: 4px;
+    border-width:0;
+    color: #7d97ad;
+    background-color:#7d97ad;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column-gap: 10px;
+}
+
+#doggy {
+    padding-top: 15px;
+    width: 100%;
+    display: box;
+}
+
+.featwork {
+    height: 50px;
+    padding-left: 5px;
+    text-align: bottom;
+}
+
+.driver {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.box {
+    height: auto;
+    min-width: 300px;
+    max-width: 340px;
+    flex-grow: 1;
+    margin: 5px;
+    text-align: center;
+}
+
+img {width: 100%;}
+
+.featured_work {
+    font-size: 20px;
+}
+
+/*
+The .box: first-of-type/last-of-type keeps the bottom section pictures aligned with the margins when the viewport gets smaller.
+*/
+
+.box:first-of-type {
+    margin-left: 0;
+}
+
+.box:last-of-type {
+    margin-right: 0;
+}
+
+/*
+The following media query shifts the company name to the left and reduces the font size to fit on smaller browsers
+It also reduces the font size in the "featwork" class.
+*/
+
+@media screen and (max-width: 546px) {
+    .company {
+        text-align: left;
+        padding-top: 10px;
+        font-size: 12px;
+    }
+
+    .featwork {
+        font-size: 12px;
+    }
+}
+
+
